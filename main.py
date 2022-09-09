@@ -50,8 +50,8 @@ PASSWORD = os.environ["PASSWORD"]  # 密码
 # 'error': '101.0 above free usage limit 100 per day and no balance',
 # 'requestId': '7690c065-70e0-4757-839b-5fd8381e65c7'
 # }
-TRUECAPTCHA_USERID = os.environ.get("TRUECAPTCHA_USERID", "19james")
-TRUECAPTCHA_APIKEY = os.environ.get("TRUECAPTCHA_APIKEY", "XtZprxL5mW6fYBjDHOuE")
+TRUECAPTCHA_USERID = os.environ("TRUECAPTCHA_USERID")
+TRUECAPTCHA_APIKEY = os.environ("TRUECAPTCHA_APIKEY")
 
 # Extract key data from your emails, automatically. https://mailparser.io 
 # 30 Emails/Month, 10 inboxes and unlimited downloads for free.
@@ -262,7 +262,6 @@ def login(username: str, password: str) -> (str, requests.session):
             solved_result = captcha_solver(captcha_image_url, session)
             log("solved_result {}".format(solved_result))
             captcha_code = handle_captcha_solved_result(solved_result)
-            log("captcha_code {}".format(captcha_code))
             log("[Captcha Solver] 识别的验证码是: {}".format(captcha_code))
 
             if CHECK_CAPTCHA_SOLVER_USAGE:
