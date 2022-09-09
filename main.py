@@ -230,6 +230,7 @@ def login(username: str, password: str) -> (str, requests.session):
     sess = session.get(url, headers=headers)
     log("sess = {0}".format(sess))
     sess_id = re.findall("PHPSESSID=(\\w{10,100});", str(sess.headers))[0]
+    log("sess_id={0}".format(sess_id))
     # visit png
     logo_png_url = "https://support.euserv.com/pic/logo_small.png"
     session.get(logo_png_url, headers=headers)
