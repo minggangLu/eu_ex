@@ -260,7 +260,9 @@ def login(username: str, password: str) -> (str, requests.session):
         else:
             log("[Captcha Solver] 进行验证码识别...")
             solved_result = captcha_solver(captcha_image_url, session)
+            log("solved_result {}".format(solved_result))
             captcha_code = handle_captcha_solved_result(solved_result)
+            log("captcha_code {}".format(captcha_code))
             log("[Captcha Solver] 识别的验证码是: {}".format(captcha_code))
 
             if CHECK_CAPTCHA_SOLVER_USAGE:
