@@ -228,7 +228,7 @@ def login(username: str, password: str) -> (str, requests.session):
     session = requests.Session()
 
     sess = session.get(url, headers=headers)
-    log("sess = {0}".format(json.dumps(sess)))
+    log("sess = {0}".format(str(sess)))
     sess_id = re.findall("PHPSESSID=(\\w{10,100});", str(sess.headers))[0]
     log("sess_id={0}".format(sess_id))
     # visit png
