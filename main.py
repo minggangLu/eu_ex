@@ -137,7 +137,6 @@ def captcha_solver(captcha_image_url: str, session: requests.session) -> dict:
         "userid": TRUECAPTCHA_USERID,
         "apikey": TRUECAPTCHA_APIKEY,
         "case": "mixed",
-        "mode": "human",
         "data": str(encoded_string)[2:-1],
     }
     log("[EUserv] captcha data {}th time".format(json.dumps(data)))
