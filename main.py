@@ -140,6 +140,7 @@ def captcha_solver(captcha_image_url: str, session: requests.session) -> dict:
         "mode": "human",
         "data": str(encoded_string)[2:-1],
     }
+    log("[EUserv] captcha data {}th time".format(json.dumps(data)))
     r = requests.post(url=url, json=data)
     j = json.loads(r.text)
     return j
