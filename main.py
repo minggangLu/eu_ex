@@ -246,6 +246,7 @@ def login(username: str, password: str) -> (str, requests.session):
     }
     f = session.post(url, headers=headers, data=login_data)
     f.raise_for_status()
+    log("login fff={}".format(f.text))
 
     if (
         f.text.find("Hello") == -1
