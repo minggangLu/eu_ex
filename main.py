@@ -223,7 +223,7 @@ def get_pin_from_mailparser(url_id: str) -> str:
 
 @login_retry(max_retry=LOGIN_MAX_RETRY_COUNT)
 def login(username: str, password: str) -> (str, requests.session):
-    headers = {"user-agent": user_agent, "origin": "https://www.euserv.com"}
+    headers = {"user-agent": user_agent, "origin": "https://support.euserv.com"}
     url = "https://support.euserv.com/index.iphp"
     captcha_image_url = "https://support.euserv.com/securimage_show.php"
     session = requests.Session()
