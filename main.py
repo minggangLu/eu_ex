@@ -82,10 +82,7 @@ WAITING_TIME_OF_PIN = 15
 # options: True or False
 CHECK_CAPTCHA_SOLVER_USAGE = True
 
-user_agent = (
-    "Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) "
-    "Chrome/95.0.4638.69 Safari/604.1"
-)
+user_agent = "Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1"
 
 desp = ""  # 空值
 
