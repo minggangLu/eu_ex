@@ -105,6 +105,7 @@ def login_retry(*args, **kwargs):
             if not max_retry:
                 max_retry = 3
             number = 0
+            log("[EUserv] login  ret {}".format(ret))
             if ret == "-1":
                 while number < max_retry:
                     number += 1
